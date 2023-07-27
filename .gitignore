@@ -1,0 +1,5 @@
+node_modules
+logs
+*.tar
+.vscode
+deploy.tar
