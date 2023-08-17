@@ -15,7 +15,7 @@ fs.readdirSync(__dirname)
   .filter((e) => e.match(".router"))
   .forEach((file) => {
     const endpoint = `/${file.replace(".router.js", "")}`;
-    router.use(endpoint, isAuth, require(`./${file}`));
+    router.use(endpoint, require(`./${file}`));
   });
 
 module.exports = router;
