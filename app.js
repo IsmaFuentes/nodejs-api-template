@@ -16,7 +16,7 @@ const db =
     ? process.env.FULL_DB_URI_DEV
     : process.env.FULL_DB_URI_PRO;
 
-mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", true);
 mongoose.connect(db, { autoIndex: true });
 
 mongoose.connection.on("connected", function () {
